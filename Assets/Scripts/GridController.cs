@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -16,10 +17,7 @@ public class GridController : MonoBehaviour {
     private void Awake()
     {
         if (Instance == null)
-        {
-            DontDestroyOnLoad(gameObject);
             Instance = this;
-        }
         else if (Instance != this)
         {
             Destroy(gameObject);
@@ -47,6 +45,17 @@ public class GridController : MonoBehaviour {
         _Vector end = new _Vector(2, 2);
         PrintFath(FindPath(start, end));
         */
+        int index = 2;
+        int[] ars = { 1, 2, 3, 4, 5, 6, 0, 0, 0 };
+
+        Array.Copy(ars, index, ars, index + 1, 4 - index);//1,2,3,3,4,5,6,0,0,
+
+        StringBuilder sb = new StringBuilder();
+        foreach(var a in ars)
+        {
+            sb.Append(a + ",");
+        }
+        Debug.Log(sb.ToString());
 	}
 	
 	// Update is called once per frame
@@ -71,11 +80,13 @@ public class GridController : MonoBehaviour {
         else
         {
             _prePath = FindPath(_startCell.Position, cell.Position);
+            _startCell = null;
+            if (_prePath == null) //找不到路径
+                return;
             foreach(var c in _prePath)
             {
                 c.Show();
             }
-            _startCell = null;
         }
     }
 
@@ -97,7 +108,7 @@ public class GridController : MonoBehaviour {
         while (nodes.OpenCount > 0)
         {
             BNode current = nodes.PopToClosed();
-            Debug.Log("取点:" + current.position);
+            //Debug.Log("取点:" + current.position);
             //获取四周相邻节点
             foreach (var d in _Vector.Directions)
             {
@@ -112,17 +123,11 @@ public class GridController : MonoBehaviour {
                         H = tmp.Distance(end),
                         parent = current
                     };
+                    if (tmp.Equals(end))  //找到目的地
+                        return GetResult(n);
                     //插入列表中，Insert中还有过滤功能
                     nodes.Insert(n);
                 }
-                else if (tmp.Equals(end))
-                {
-                    return GetResult(current);//目的地是小怪
-                }
-            }
-            if (current.position.Equals(end))
-            {
-                return GetResult(current);//目的地是空地
             }
         }
         Debug.LogFormat("{0}到{1}找不到出路", start, end);

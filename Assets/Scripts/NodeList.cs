@@ -1,5 +1,4 @@
 ﻿using System;
-using UnityEngine;
 
 //专门为A*算法设计的List数据结构
 //二分插入排序的数组进行快速操作,以F为值，
@@ -11,7 +10,7 @@ public class NodeList
     private int _firstOpenIndex = 0;//数组的第一个元素索引(默认第一个)
 
     private const int _defaultCapacity = 4;//默认大小
-    private const int _maxCapacity = 1000;
+    //private const int _maxCapacity = 1000;
 
     public NodeList(BNode node)
     {
@@ -37,54 +36,49 @@ public class NodeList
     public void Insert(BNode item)
     {
         //防止重复，判断是否已经存在
-        int startIdx = _size;
-        int endIdx = _size;
+        int startIdx = _size, endIdx = _size;
         for (int i = 0; i < _size; i++)
         {
             if(i < _firstOpenIndex)
             {
                 //如果是在closed中 直接返回
                 if (_items[i].Equals(item))
-                {
                     return;
-                }
             }
             else
             {
                 if (_items[i].Equals(item))
                 {
                     //如果在opend中，并且G权重没有更小 直接返回
-                    if (_items[i].G <= item.G) 
-                    {
+                    if (item.G >= _items[i].G) 
                         return;
-                    }
-                    /*
-                    else
-                    {
-                        endIdx = i;
-                        break;
-                    }
-                    */
+                    endIdx = i;
+                    break;
                 }
                 //判断插入位置的索引, 只取第一次满足条件的值
-                if (item.F < _items[i].F && startIdx == _size)
+                if (startIdx == _size
+                    && item.F <= _items[i].F)
+                {
+                    if (item.F == _items[i].F && item.G < _items[i].G)
+                        continue;
                     startIdx = i;
+                }
             }
         }
-        if (_size == _items.Length) //扩容,不够用了就翻倍
-            EnsureCapacity(_size + 1);
 
-        int length = endIdx - startIdx;
-        //数组向后移动
-        while(length > 0)
-        {
-            _items[startIdx + length] = _items[startIdx + length - 1];
-            length--;
-        }
-        _items[startIdx] = item;
         //如果最后一个元素等于 _size 说明是新元素加入
         if (endIdx == _size)
+        {
+            EnsureCapacity(_size + 1);//扩容,不够用了就翻倍
             _size++;
+        }
+
+        if (endIdx > startIdx) //数组向后移动
+            Array.Copy(_items, startIdx, _items, startIdx + 1, endIdx - startIdx);
+        else //找不到插入位置，endIdx就是插入位置
+            startIdx = endIdx;
+
+        _items[startIdx] = item;
     }
 
 
@@ -104,15 +98,15 @@ public class NodeList
     // whichever is larger.
     private void EnsureCapacity(int min)
     {
-        if (_items.Length < min)
-        {
-            int newCapacity = _items.Length == 0 ? _defaultCapacity : _items.Length * 2;
-            // Allow the list to grow to maximum possible capacity (~2G elements) before encountering overflow.
-            // Note that this check works even when _items.Length overflowed thanks to the (uint) cast
-            if (newCapacity > _maxCapacity) newCapacity = _maxCapacity;
-            if (newCapacity < min) newCapacity = min;
-            Capacity = newCapacity;
-        }
+        if (_items.Length >= min)
+            return;
+
+        int newCapacity = _items.Length == 0 ? _defaultCapacity : _items.Length * 2;
+        // Allow the list to grow to maximum possible capacity (~2G elements) before encountering overflow.
+        // Note that this check works even when _items.Length overflowed thanks to the (uint) cast
+        // if (newCapacity > _maxCapacity) newCapacity = _maxCapacity;
+        if (newCapacity < min) newCapacity = min;
+        Capacity = newCapacity;
     }
 
     // Gets and sets the capacity of this list.  The capacity is the size of

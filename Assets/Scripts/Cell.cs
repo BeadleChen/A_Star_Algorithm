@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor;
 
+[ExecuteInEditMode]
 public class Cell : MonoBehaviour {
 
     private Image _selfI;
@@ -22,8 +24,9 @@ public class Cell : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (!EditorApplication.isPlaying)
+            _selfI.color = IsBlock ? Color.black : _srcColor;
+    }
 
     public void Show()
     {

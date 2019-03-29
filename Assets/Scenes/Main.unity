@@ -874,21 +874,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224371886082652870, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
-        type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224371886082652870, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
-        type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224371886082652870, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
-        type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1353651119919186, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde, type: 2}
       propertyPath: m_Name
       value: Cell (24)
@@ -1111,21 +1096,6 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224371886082652870, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
-        type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224371886082652870, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
-        type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224371886082652870, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
-        type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1353651119919186, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde, type: 2}
       propertyPath: m_Name
@@ -2497,21 +2467,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224371886082652870, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
-        type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224371886082652870, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
-        type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224371886082652870, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
-        type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1353651119919186, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde, type: 2}
       propertyPath: m_Name
       value: Cell (25)
@@ -2620,21 +2575,6 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224371886082652870, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
-        type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224371886082652870, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
-        type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224371886082652870, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
-        type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1353651119919186, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde, type: 2}
       propertyPath: m_Name
@@ -2868,21 +2808,6 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224371886082652870, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
-        type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224371886082652870, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
-        type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224371886082652870, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
-        type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1353651119919186, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde, type: 2}
       propertyPath: m_Name
@@ -3722,6 +3647,11 @@ Prefab:
       propertyPath: m_Name
       value: Cell (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 114003706582304324, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
+        type: 2}
+      propertyPath: IsBlock
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde, type: 2}
   m_IsPrefabParent: 0
@@ -4087,7 +4017,7 @@ Prefab:
     - target: {fileID: 114003706582304324, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
         type: 2}
       propertyPath: IsBlock
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde, type: 2}
@@ -4323,21 +4253,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224371886082652870, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
-        type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224371886082652870, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
-        type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224371886082652870, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
-        type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1353651119919186, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde, type: 2}
       propertyPath: m_Name
       value: Cell (12)
@@ -4446,21 +4361,6 @@ Prefab:
         type: 2}
       propertyPath: m_Pivot.y
       value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 224371886082652870, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
-        type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224371886082652870, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
-        type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224371886082652870, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
-        type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1353651119919186, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde, type: 2}
       propertyPath: m_Name
@@ -4571,21 +4471,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224371886082652870, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
-        type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224371886082652870, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
-        type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224371886082652870, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
-        type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1353651119919186, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde, type: 2}
       propertyPath: m_Name
       value: Cell (27)
@@ -4593,7 +4478,7 @@ Prefab:
     - target: {fileID: 114003706582304324, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
         type: 2}
       propertyPath: IsBlock
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde, type: 2}
@@ -5459,21 +5344,6 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 224371886082652870, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
-        type: 2}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224371886082652870, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
-        type: 2}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 224371886082652870, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
-        type: 2}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1353651119919186, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde, type: 2}
       propertyPath: m_Name
       value: Cell (28)
@@ -5481,7 +5351,7 @@ Prefab:
     - target: {fileID: 114003706582304324, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
         type: 2}
       propertyPath: IsBlock
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde, type: 2}
@@ -5869,6 +5739,11 @@ Prefab:
     - target: {fileID: 1353651119919186, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde, type: 2}
       propertyPath: m_Name
       value: Cell (34)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114003706582304324, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde,
+        type: 2}
+      propertyPath: IsBlock
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c4d0e9170bfe9054b9a9c2d4f2c90bde, type: 2}
